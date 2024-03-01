@@ -8,12 +8,8 @@ export interface PageProps {
 }
 
 export default function Page({ params }: PageProps) {
-  console.log(params.id);
-
   useEffect(() => {
     const id = Number.parseInt(params.id);
-    console.log(id);
-
     if (Number.isNaN(id)) {
       notFound();
     }
